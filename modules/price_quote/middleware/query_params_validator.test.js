@@ -29,7 +29,7 @@ describe('queryParamsValidarot', () => {
     queryParamsValidarot(reqMock, {}, nextSpy);
     expect(nextSpy).toHaveBeenNthCalledWith(1, new ExchangeError({
       status: 403,
-      message: 'Malformed query params: required_currency_code',
+      message: 'Malformed values for: required_currency_code',
     }));
   });
 
@@ -46,7 +46,7 @@ describe('queryParamsValidarot', () => {
     queryParamsValidarot(reqMock, {}, nextSpy);
     expect(nextSpy).toHaveBeenNthCalledWith(1, new ExchangeError({
       status: 403,
-      message: 'Malformed query params: paying_currency_code',
+      message: 'Malformed values for: paying_currency_code',
     }));
   });
 
@@ -63,7 +63,7 @@ describe('queryParamsValidarot', () => {
     queryParamsValidarot(reqMock, {}, nextSpy);
     expect(nextSpy).toHaveBeenNthCalledWith(1, new ExchangeError({
       status: 403,
-      message: 'Malformed query params: amount',
+      message: 'Malformed values for: amount',
     }));
   });
 
@@ -80,7 +80,7 @@ describe('queryParamsValidarot', () => {
     queryParamsValidarot(reqMock, {}, nextSpy);
     expect(nextSpy).toHaveBeenNthCalledWith(1, new ExchangeError({
       status: 403,
-      message: 'Malformed query params: required_currency_code,paying_currency_code,amount',
+      message: 'Malformed values for: required_currency_code,paying_currency_code,amount',
     }));
   });
 });

@@ -7,7 +7,9 @@
     "start": "NODE_ENV=production node index",
     "dev": "nodemon index",
     "test": "NODE_ENV=test jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "precommit": "npm run lint && npm test",
+    "ci": "npm run precommit"
   },
   "author": "",
   "license": "ISC",
@@ -24,7 +26,7 @@
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.3",
-    "husky": "^2.4.0",
+    "husky": "^0.14.3",
     "jest": "^24.8.0",
     "nodemon": "^1.19.1",
     "supertest": "^4.0.2"
