@@ -7,8 +7,7 @@
     "start": "NODE_ENV=production node index",
     "dev": "nodemon index",
     "test": "NODE_ENV=test jest",
-    "lint": "eslint .",
-    "precommit": "npm run lint && npm test"
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",
@@ -34,5 +33,10 @@
     "setupFiles": [
       "<rootDir>/__mocks__/cache_client.js"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm test"
+    }
   }
 }
