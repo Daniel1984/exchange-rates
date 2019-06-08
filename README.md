@@ -6,3 +6,5 @@
 
 ### Configuration
 For simplicity of local env development, all `env` variables are located in `.env` file so for example if your `redis` server is running on different port then change it there.
+
+[![Build Status](https://travis-ci.org/Daniel1984/exchange-rates.svg?branch=master)](https://travis-ci.org/Daniel1984/exchange-rates)
